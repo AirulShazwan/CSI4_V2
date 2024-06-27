@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <title>Kagont</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/images/x-icon/01.png"
+    />
+
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/icofont.min.css" />
+    <link rel="stylesheet" href="assets/css/lightcase.css" />
+    <link rel="stylesheet" href="assets/css/swiper.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+      .timeline-container {
+        width: 100%;
+        overflow-x: auto;
+        padding: 20px;
+        background-color: #fff;
+      }
+      .timeline {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+      }
+      .timeline::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        background-color: #1e90ff;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+      .timeline-event {
+        background-color: #1e90ff;
+        color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        width: 250px;
+        height: 200px;
+        text-align: center;
+        position: relative;
+        cursor: pointer;
+        margin: 0 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .timeline-event::before {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: #1e90ff;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -10px;
+        border: 4px solid #fff;
+      }
+      .timeline-event:nth-child(odd) {
+        background-color: #87cefa;
+      }
+      .timeline-event:hover {
+        background-color: #4682b4;
+      }
+      .timeline-event h3 {
+        margin: 20px 0 10px;
+        font-size: 18px;
+      }
+      .timeline-event p {
+        margin: 10px 0;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- preloader start here -->
+    <div class="preloader">
+      <div class="preloader-inner">
+        <div class="preloader-icon">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <!-- preloader ending here -->
+
+    <!-- ==========Header Section Starts Here========== -->
+    <header class="header-section">
+      <div class="header-bottom">
+        <div class="container">
+          <div class="header-wrapper">
+            <div class="logo">
+              <a href="index.html">
+                <img src="assets/images/logo/01.png" alt="logo" />
+              </a>
+            </div>
+            <div class="menu-area">
+              <ul class="menu">
+                <li>
+                  <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                  <a href="#0">About</a>
+                  <ul class="submenu">
+                    <li><a href="committee.html">Our Comittee</a></li>
+                    <li><a href="organizer.html">Organizer</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#0">Speaker</a>
+                  <ul class="submenu">
+                    <li><a href="keynote-speaker.html">Keynote Speakers</a></li>
+                    <li>
+                      <a href="speakers.html">Workshop Speaker</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#0">Registration</a>
+                  <ul class="submenu">
+                    <li><a href="important-dates.html">Important Dates</a></li>
+                    <li><a href="fees.html">Fees & Payment</a></li>
+                    <li><a href="register.html">Submission</a></li>
+                  </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+
+              <!-- toggle icons -->
+              <div class="header-bar d-lg-none">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- ==========Header Section Ends Here========== -->
+
+    <!-- Page Header Section Start Here -->
+    <section class="page-header padding-tb">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="page-header-content-area">
+          <h4 class="ph-title">Login for Event</h4>
+          <ul class="lab-ul">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a class="active">login</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- Page Header Section Ending Here -->
+
+    <!-- Login Section Section Starts Here -->
+    <div class="login-section padding-tb">
+      <center>
+        <div class="container2">
+          <div class="timeline-container">
+            <div class="timeline">
+              <div class="timeline-event" onclick="showDetails(0)">
+                <h3>Abstract submission deadline</h3>
+                <p>1 August 2024</p>
+              </div>
+              <div class="timeline-event" onclick="showDetails(1)">
+                <h3>Second Event Title Example</h3>
+                <p>Feb 1, 2023</p>
+              </div>
+              <div class="timeline-event" onclick="showDetails(2)">
+                <h3>Third Event Title Example</h3>
+                <p>Mar 1, 2023</p>
+              </div>
+              <div class="timeline-event" onclick="showDetails(3)">
+                <h3>Fourth Event Title Example</h3>
+                <p>Apr 1, 2023</p>
+              </div>
+              <div class="timeline-event" onclick="showDetails(4)">
+                <h3>Fifth Event Title Example</h3>
+                <p>May 1, 2023</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </center>
+      <script>
+        function showDetails(index) {
+          // No details to show since we only have titles and dates
+        }
+      </script>
+    </div>
+    <!-- Login Section Section Ends Here -->
+
+    <!-- Footer Section start here -->
+    <footer
+      class="footer-section"
+      style="background-image: url(assets/images/bg-images/footer-bg.png)"
+    >
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="footer-bottom-content text-center">
+                <p>
+                  &copy;2024 <a href="index.html">CSI2024</a> - 4<sup>th</sup>
+                  INTERNATIONAL CONFERENCE ON COMMUNICATION IN SCIENTIFIC
+                  INQUIRY 2024
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Section end here -->
+
+    <!-- scrollToTop start here -->
+    <a href="#" class="scrollToTop"
+      ><i class="icofont-bubble-up"></i><span class="pluse_1"></span
+      ><span class="pluse_2"></span
+    ></a>
+    <!-- scrollToTop ending here -->
+
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/fontawesome.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/swiper.min.js"></script>
+    <script src="assets/js/circularProgressBar.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/lightcase.js"></script>
+    <script src="assets/js/functions.js"></script>
+  </body>
+</html>
